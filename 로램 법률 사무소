@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로램 법률사무소 | 당신의 든든한 법률 파트너</title>
+    <meta name="description" content="서초구 전문 변호사. 민사, 형사, 이혼, 부동산 등 당신의 권리를 지켜드립니다. 무료 상담 예약하세요.">
+    
+    <!-- Pretendard Font -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Pretendard', 'sans-serif'],
+                    },
+                    colors: {
+                        navy: '#1B2A4A',
+                        point: '#2E75B6',
+                        dark: '#333333',
+                        subtext: '#666666',
+                        lightbg: '#F0F4F8',
+                        kakao: '#FEE500',
+                        naver: '#03C75A'
+                    },
+                    boxShadow: {
+                        'trendy': '0 10px 40px -10px rgba(27, 42, 74, 0.08)',
+                        'floating': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { font-family: 'Pretendard', sans-serif; word-break: keep-all; }
+        
+        /* Glassmorphism GNB */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        /* Scroll Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Hide Scrollbar for Carousels */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Gradient Text */
+        .text-gradient {
+            background: linear-gradient(135deg, #1B2A4A 0%, #2E75B6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-white text-dark antialiased">
+
+    <!-- GNB -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <span class="font-bold text-2xl text-navy tracking-tight">로램 <span class="text-point font-medium">법률사무소</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#why-us" class="text-dark hover:text-point font-medium transition">사무소 소개</a>
+                    <a href="#expertise" class="text-dark hover:text-point font-medium transition">전문분야</a>
+                    <a href="#process" class="text-dark hover:text-point font-medium transition">업무절차</a>
+                    <a href="#contact" class="text-dark hover:text-point font-medium transition">상담안내</a>
+                    <a href="tel:02-1234-5678" class="flex items-center gap-2 bg-lightbg px-4 py-2 rounded-full text-navy font-bold hover:bg-gray-200 transition">
+                        <i class="fa-solid fa-phone text-point"></i> 02-1234-5678
+                    </a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-dark hover:text-point focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECTION 1: Hero -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Image with Modern Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1589391886645-d51941baf7fb?q=80&w=2000&auto=format&fit=crop" alt="법률사무소 배경" class="w-full h-full object-cover object-center" />
+            <div class="absolute inset-0 bg-gradient-to-r from-navy/90 to-navy/60"></div>
+        </div>
+        
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-16 reveal active">
+            <div class="flex flex-wrap justify-center gap-2 mb-6">
+                <span class="px-4 py-1 border border-white/30 rounded-full text-white/90 text-sm backdrop-blur-sm">민사</span>
+                <span class="px-4 py-1 border border-white/30 rounded-full text-white/90 text-sm backdrop-blur-sm">형사</span>
+                <span class="px-4 py-1 border border-white/30 rounded-full text-white/90 text-sm backdrop-blur-sm">이혼</span>
+                <span class="px-4 py-1 border border-white/30 rounded-full text-white/90 text-sm backdrop-blur-sm">부동산</span>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight">
+                당신의 소중한 권리,<br/>
+                <span class="text-blue-300">끝까지 지켜내겠습니다.</span>
+            </h1>
+            <h2 class="text-lg md:text-xl text-gray-200 mb-10 font-light">
+                처음부터 끝까지, 변함없이 당신 편에 서는 든든한 법률 파트너
+            </h2>
+            <a href="#contact" class="inline-block bg-point hover:bg-blue-600 text-white font-bold text-lg py-4 px-10 rounded-full shadow-lg hover:shadow-point/50 transform hover:-translate-y-1 transition-all duration-300">
+                무료 상담 예약하기 <i class="fa-solid fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- SECTION 2: Why Us (Trust Points) -->
+    <section id="why-us" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Counters -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20 reveal">
+                <div class="text-center p-6 rounded-3xl bg-lightbg transition hover:shadow-trendy">
+                    <div class="text-point text-4xl mb-4"><i class="fa-solid fa-scale-balanced"></i></div>
+                    <div class="text-subtext font-medium mb-2">법률 경력</div>
+                    <div class="text-4xl font-bold text-navy flex justify-center items-end gap-1">
+                        <span class="counter" data-target="15">0</span>년
+                    </div>
+                </div>
+                <div class="text-center p-6 rounded-3xl bg-lightbg transition hover:shadow-trendy">
+                    <div class="text-point text-4xl mb-4"><i class="fa-solid fa-users"></i></div>
+                    <div class="text-subtext font-medium mb-2">누적 상담</div>
+                    <div class="text-4xl font-bold text-navy flex justify-center items-end gap-1">
+                        <span class="counter" data-target="3500">0</span>건+
+                    </div>
+                </div>
+                <div class="text-center p-6 rounded-3xl bg-lightbg transition hover:shadow-trendy">
+                    <div class="text-point text-4xl mb-4"><i class="fa-solid fa-face-smile"></i></div>
+                    <div class="text-subtext font-medium mb-2">의뢰인 만족도</div>
+                    <div class="text-4xl font-bold text-navy flex justify-center items-end gap-1">
+                        <span class="counter" data-target="98">0</span>%
+                    </div>
+                </div>
+            </div>
+
+            <!-- Promises -->
+            <div class="text-center mb-12 reveal">
+                <h2 class="text-3xl font-bold text-navy mb-4">로램 법률사무소의 <span class="text-point">3가지 약속</span></h2>
+                <p class="text-subtext">의뢰인의 불안함을 덜어드리기 위해 투명하게 일합니다.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 reveal">
+                <div class="border border-gray-100 p-8 rounded-3xl shadow-sm hover:shadow-trendy transition duration-300 bg-white group">
+                    <div class="bg-lightbg w-14 h-14 rounded-2xl flex items-center justify-center text-point text-2xl mb-6 group-hover:bg-point group-hover:text-white transition">
+                        <i class="fa-regular fa-comments"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">사건 진행 상황 주 1회 보고</h3>
+                    <p class="text-subtext leading-relaxed">내 사건이 어떻게 진행되고 있는지 답답하지 않도록, 정기적으로 상세히 브리핑 해드립니다.</p>
+                </div>
+                <div class="border border-gray-100 p-8 rounded-3xl shadow-sm hover:shadow-trendy transition duration-300 bg-white group">
+                    <div class="bg-lightbg w-14 h-14 rounded-2xl flex items-center justify-center text-point text-2xl mb-6 group-hover:bg-point group-hover:text-white transition">
+                        <i class="fa-solid fa-file-invoice-dollar"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">수임료 사전 명확 안내</h3>
+                    <p class="text-subtext leading-relaxed">숨겨진 비용이나 예상치 못한 추가 청구 없이, 계약 전 모든 비용을 투명하게 공개합니다.</p>
+                </div>
+                <div class="border border-gray-100 p-8 rounded-3xl shadow-sm hover:shadow-trendy transition duration-300 bg-white group">
+                    <div class="bg-lightbg w-14 h-14 rounded-2xl flex items-center justify-center text-point text-2xl mb-6 group-hover:bg-point group-hover:text-white transition">
+                        <i class="fa-solid fa-mug-hot"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">초기 상담 비용 무료</h3>
+                    <p class="text-subtext leading-relaxed">혼자 끙끙 앓지 마세요. 부담 없이 방문하시어 전문가의 1차 진단을 받아보실 수 있습니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: Profile -->
+    <section id="profile" class="py-24 bg-lightbg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-12 lg:gap-20 reveal">
+                <!-- Profile Image -->
+                <div class="w-full md:w-5/12 text-center">
+                    <div class="relative inline-block rounded-3xl overflow-hidden shadow-floating">
+                        <!-- 안정적으로 노출되는 실시간 AI 생성 한국인 남성 변호사 이미지 링크로 교체! -->
+                        <img src="https://image.pollinations.ai/prompt/Handsome%20Korean%20male%20lawyer%20in%20his%20early%2040s%20wearing%20navy%20suit%20and%20light%20blue%20shirt%20professional%20portrait%20studio%20lighting?width=800&height=1000&nologo=true" alt="대표 변호사 김대표 (한국인 40대 남성)" class="w-full h-auto object-cover max-h-[500px]" />
+                        <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent p-6 text-left">
+                            <p class="text-white/80 text-sm font-light">대한변호사협회 등록 제12345호</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Profile Text -->
+                <div class="w-full md:w-7/12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-navy mb-2">김대표 <span class="text-xl text-subtext font-normal ml-2">대표 변호사</span></h2>
+                    <div class="w-12 h-1 bg-point mb-8"></div>
+                    
+                    <p class="text-lg text-dark leading-relaxed mb-8 font-medium">
+                        "법률 분쟁은 인생에서 만나는 가장 차갑고 외로운 겨울입니다.<br/>
+                        그 매서운 바람을 막아주는 든든한 외투가 되어 드리겠습니다."
+                    </p>
+                    
+                    <ul class="space-y-4 text-subtext">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-point mt-1"></i>
+                            <span>현) 로램 법률사무소 대표 변호사</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-point mt-1"></i>
+                            <span>전) 서울중앙지방법원 국선변호인</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-point mt-1"></i>
+                            <span>대한변호사협회 등록 형사법, 이혼 전문 변호사</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-point mt-1"></i>
+                            <span>연세대학교 법학전문대학원 졸업</span>
+                        </li>
+                    </ul>
+
+                    <div class="mt-8 p-6 bg-white rounded-2xl shadow-sm border border-gray-100">
+                        <p class="text-subtext italic">"승소라는 결과도 중요하지만, 그 과정에서 의뢰인이 겪는 마음의 상처까지 세심하게 보듬는 것이 진짜 변호사의 역할이라고 믿습니다."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: Expertise -->
+    <section id="expertise" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl font-bold text-navy mb-4">주요 <span class="text-point">전문 분야</span></h2>
+                <p class="text-subtext">수많은 승소 사례로 증명된 분야별 맞춤형 솔루션을 제공합니다.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 reveal">
+                <!-- Card 1 -->
+                <div class="group relative p-8 rounded-3xl bg-lightbg overflow-hidden transition-all duration-300 hover:bg-navy hover:shadow-floating">
+                    <div class="text-point text-4xl mb-6 transition-colors duration-300 group-hover:text-white">
+                        <i class="fa-solid fa-gavel"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 transition-colors duration-300 group-hover:text-white">민사 소송</h3>
+                    <p class="text-subtext transition-colors duration-300 group-hover:text-gray-300 text-sm leading-relaxed">
+                        대여금, 손해배상, 계약위반 등 부당하게 잃어버린 당신의 정당한 권리를 완벽하게 되찾아 드립니다.
+                    </p>
+                    <!-- Decorative background element -->
+                    <div class="absolute -right-4 -bottom-4 text-8xl text-navy/5 group-hover:text-white/5 transition-colors duration-300 z-0 pointer-events-none">
+                        <i class="fa-solid fa-gavel"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group relative p-8 rounded-3xl bg-lightbg overflow-hidden transition-all duration-300 hover:bg-navy hover:shadow-floating">
+                    <div class="text-point text-4xl mb-6 transition-colors duration-300 group-hover:text-white">
+                        <i class="fa-solid fa-handcuffs"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 transition-colors duration-300 group-hover:text-white">형사 변호</h3>
+                    <p class="text-subtext transition-colors duration-300 group-hover:text-gray-300 text-sm leading-relaxed">
+                        한 순간의 실수나 억울한 오해로 인한 위기 상황. 경찰 조사 단계부터 철저히 방어하여 일상을 지켜냅니다.
+                    </p>
+                    <div class="absolute -right-4 -bottom-4 text-8xl text-navy/5 group-hover:text-white/5 transition-colors duration-300 z-0 pointer-events-none">
+                        <i class="fa-solid fa-handcuffs"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group relative p-8 rounded-3xl bg-lightbg overflow-hidden transition-all duration-300 hover:bg-navy hover:shadow-floating">
+                    <div class="text-point text-4xl mb-6 transition-colors duration-300 group-hover:text-white">
+                        <i class="fa-solid fa-ring"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 transition-colors duration-300 group-hover:text-white">이혼 · 가사</h3>
+                    <p class="text-subtext transition-colors duration-300 group-hover:text-gray-300 text-sm leading-relaxed">
+                        상처만 남는 싸움이 되지 않도록. 재산분할, 양육권 확보 등 새로운 출발을 위한 든든한 동행이 되어 드립니다.
+                    </p>
+                    <div class="absolute -right-4 -bottom-4 text-8xl text-navy/5 group-hover:text-white/5 transition-colors duration-300 z-0 pointer-events-none">
+                        <i class="fa-solid fa-ring"></i>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group relative p-8 rounded-3xl bg-lightbg overflow-hidden transition-all duration-300 hover:bg-navy hover:shadow-floating">
+                    <div class="text-point text-4xl mb-6 transition-colors duration-300 group-hover:text-white">
+                        <i class="fa-regular fa-building"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 transition-colors duration-300 group-hover:text-white">부동산</h3>
+                    <p class="text-subtext transition-colors duration-300 group-hover:text-gray-300 text-sm leading-relaxed">
+                        명도소송, 보증금 반환, 재건축 등 얽히고설킨 부동산 분쟁. 가장 소중한 자산을 확실하고 안전하게 지켜드립니다.
+                    </p>
+                    <div class="absolute -right-4 -bottom-4 text-8xl text-navy/5 group-hover:text-white/5 transition-colors duration-300 z-0 pointer-events-none">
+                        <i class="fa-regular fa-building"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: Process -->
+    <section id="process" class="py-24 bg-lightbg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl font-bold text-navy mb-4">체계적인 <span class="text-point">업무 프로세스</span></h2>
+                <p class="text-subtext">답답함 없이 빠르고 명확하게, 의뢰인 중심의 시스템으로 운영됩니다.</p>
+            </div>
+
+            <!-- Modern Horizontal Timeline for Desktop, Vertical for Mobile -->
+            <div class="relative reveal">
+                <!-- Line background (hidden on mobile, visible on md) -->
+                <div class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-gray-200 -translate-y-1/2 z-0"></div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-8 relative z-10">
+                    <!-- Step 1 -->
+                    <div class="flex flex-row md:flex-col items-center bg-white md:bg-transparent p-6 md:p-0 rounded-2xl shadow-sm md:shadow-none mb-4 md:mb-0 gap-4 md:gap-0">
+                        <div class="w-16 h-16 rounded-full bg-navy text-white flex items-center justify-center font-bold text-xl md:mb-6 shadow-lg flex-shrink-0">
+                            1
+                        </div>
+                        <div class="md:text-center text-left">
+                            <h4 class="font-bold text-lg mb-1">초기 무료 상담</h4>
+                            <p class="text-sm text-subtext">전화·카톡·방문</p>
+                        </div>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="flex flex-row md:flex-col items-center bg-white md:bg-transparent p-6 md:p-0 rounded-2xl shadow-sm md:shadow-none mb-4 md:mb-0 gap-4 md:gap-0">
+                        <div class="w-16 h-16 rounded-full bg-white border-4 border-point text-point flex items-center justify-center font-bold text-xl md:mb-6 shadow-lg flex-shrink-0">
+                            2
+                        </div>
+                        <div class="md:text-center text-left">
+                            <h4 class="font-bold text-lg mb-1">사건 검토 및 수임</h4>
+                            <p class="text-sm text-subtext">명확한 비용 사전 안내</p>
+                        </div>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="flex flex-row md:flex-col items-center bg-white md:bg-transparent p-6 md:p-0 rounded-2xl shadow-sm md:shadow-none mb-4 md:mb-0 gap-4 md:gap-0">
+                        <div class="w-16 h-16 rounded-full bg-white border-4 border-point text-point flex items-center justify-center font-bold text-xl md:mb-6 shadow-lg flex-shrink-0">
+                            3
+                        </div>
+                        <div class="md:text-center text-left">
+                            <h4 class="font-bold text-lg mb-1">전략 수립</h4>
+                            <p class="text-sm text-subtext">최적의 법률 로드맵 설계</p>
+                        </div>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="flex flex-row md:flex-col items-center bg-white md:bg-transparent p-6 md:p-0 rounded-2xl shadow-sm md:shadow-none mb-4 md:mb-0 gap-4 md:gap-0">
+                        <div class="w-16 h-16 rounded-full bg-white border-4 border-point text-point flex items-center justify-center font-bold text-xl md:mb-6 shadow-lg flex-shrink-0">
+                            4
+                        </div>
+                        <div class="md:text-center text-left">
+                            <h4 class="font-bold text-lg mb-1">소송·협상 진행</h4>
+                            <p class="text-sm text-subtext">진행상황 수시 공유</p>
+                        </div>
+                    </div>
+                    <!-- Step 5 -->
+                    <div class="flex flex-row md:flex-col items-center bg-white md:bg-transparent p-6 md:p-0 rounded-2xl shadow-sm md:shadow-none gap-4 md:gap-0">
+                        <div class="w-16 h-16 rounded-full bg-point text-white flex items-center justify-center font-bold text-xl md:mb-6 shadow-lg flex-shrink-0">
+                            5
+                        </div>
+                        <div class="md:text-center text-left">
+                            <h4 class="font-bold text-lg mb-1">결과 및 사후관리</h4>
+                            <p class="text-sm text-subtext">종결 후 든든한 사후 지원</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: Reviews & Cases -->
+    <section id="reviews" class="py-24 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl font-bold text-navy mb-4">의뢰인의 <span class="text-point">진솔한 목소리</span></h2>
+                <p class="text-subtext">가장 힘든 순간, 로램 법률사무소를 선택하신 분들의 이야기입니다.</p>
+            </div>
+
+            <!-- Review Cards (Horizontal Scroll / Snap) -->
+            <div class="flex overflow-x-auto gap-6 pb-8 snap-x no-scrollbar reveal -mx-4 px-4 sm:mx-0 sm:px-0">
+                
+                <div class="min-w-[300px] md:min-w-[400px] bg-lightbg rounded-3xl p-8 snap-center">
+                    <div class="text-point text-3xl mb-4"><i class="fa-solid fa-quote-left"></i></div>
+                    <p class="text-dark mb-6 leading-relaxed">
+                        "억울하게 사기 혐의를 받아 막막했는데, 밤낮없이 증거를 수집해주시고 제 일처럼 싸워주신 덕분에 무혐의를 받았습니다. 정말 평생의 은인이십니다."
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center font-bold text-sm">김*수</div>
+                        <div>
+                            <p class="font-bold text-sm">형사 (사기)</p>
+                            <p class="text-xs text-subtext">의뢰인</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="min-w-[300px] md:min-w-[400px] bg-lightbg rounded-3xl p-8 snap-center">
+                    <div class="text-point text-3xl mb-4"><i class="fa-solid fa-quote-left"></i></div>
+                    <p class="text-dark mb-6 leading-relaxed">
+                        "이혼 소송 내내 감정적으로 너무 힘들었는데, 항상 다정하게 다독여주시고 원하는 양육권과 재산분할까지 완벽하게 이끌어주셔서 새 삶을 시작할 수 있게 되었습니다."
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center font-bold text-sm">이*영</div>
+                        <div>
+                            <p class="font-bold text-sm">이혼/가사</p>
+                            <p class="text-xs text-subtext">의뢰인</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="min-w-[300px] md:min-w-[400px] bg-lightbg rounded-3xl p-8 snap-center">
+                    <div class="text-point text-3xl mb-4"><i class="fa-solid fa-quote-left"></i></div>
+                    <p class="text-dark mb-6 leading-relaxed">
+                        "보증금을 돌려받지 못해 발만 동동 굴렀는데, 명확한 법률적 조치로 신속하게 보증금 전액은 물론 지연 이자까지 받아주셨습니다. 일 처리 속도에 감탄했습니다."
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center font-bold text-sm">박*민</div>
+                        <div>
+                            <p class="font-bold text-sm">민사 (보증금반환)</p>
+                            <p class="text-xs text-subtext">의뢰인</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Cases Tags -->
+            <div class="mt-12 reveal">
+                <h3 class="text-xl font-bold text-center mb-6 text-dark">최근 성공 사례 요약</h3>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <span class="px-5 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium shadow-sm"><span class="text-point mr-1">[형사]</span> 음주운전 3진 아웃 → 집행유예 방어 성공</span>
+                    <span class="px-5 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium shadow-sm"><span class="text-point mr-1">[민사]</span> 10억 원대 물품대금 청구 소송 → 전부 승소</span>
+                    <span class="px-5 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium shadow-sm"><span class="text-point mr-1">[이혼]</span> 유책 배우자 상대 위자료 및 재산분할 80% 확보</span>
+                </div>
+                <p class="text-center text-xs text-gray-400 mt-4">* 본 사례들은 실제 성공 사례를 바탕으로 개인정보 보호를 위해 각색되었습니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: Contact & Map -->
+    <section id="contact" class="bg-navy py-24 relative overflow-hidden">
+        <!-- Abstract background shape -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-point/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col lg:flex-row gap-12">
+                
+                <!-- Contact Form -->
+                <div class="w-full lg:w-1/2 reveal">
+                    <div class="bg-white/10 backdrop-blur-md p-8 md:p-10 rounded-3xl border border-white/20">
+                        <h2 class="text-3xl font-bold text-white mb-2">지금 바로 무료 상담 받으세요</h2>
+                        <p class="text-gray-300 mb-8">상담 내용을 남겨주시면, 담당 변호사가 직접 검토 후 신속하게 연락드립니다.</p>
+                        
+                        <form onsubmit="event.preventDefault(); alert('상담 신청이 완료되었습니다.');">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <input type="text" placeholder="이름" class="w-full bg-white/90 border-0 px-4 py-3 rounded-xl focus:ring-2 focus:ring-point outline-none transition" required>
+                                </div>
+                                <div>
+                                    <input type="tel" placeholder="연락처 (- 없이 입력)" class="w-full bg-white/90 border-0 px-4 py-3 rounded-xl focus:ring-2 focus:ring-point outline-none transition" required>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <select class="w-full bg-white/90 border-0 px-4 py-3 rounded-xl focus:ring-2 focus:ring-point outline-none transition text-gray-600" required>
+                                    <option value="" disabled selected>사건 유형 선택</option>
+                                    <option value="민사">민사</option>
+                                    <option value="형사">형사</option>
+                                    <option value="이혼/가사">이혼/가사</option>
+                                    <option value="부동산">부동산</option>
+                                    <option value="기타">기타</option>
+                                </select>
+                            </div>
+                            <div class="mb-6">
+                                <textarea placeholder="간략한 사건 내용을 적어주세요." rows="4" class="w-full bg-white/90 border-0 px-4 py-3 rounded-xl focus:ring-2 focus:ring-point outline-none transition resize-none"></textarea>
+                            </div>
+                            <div class="flex items-center mb-6">
+                                <input type="checkbox" id="privacy" class="w-4 h-4 text-point bg-white border-gray-300 rounded focus:ring-point" required>
+                                <label for="privacy" class="ml-2 text-sm text-gray-300">개인정보 수집 및 이용에 동의합니다. <a href="#" class="underline">약관 보기</a></label>
+                            </div>
+                            <button type="submit" class="w-full bg-point hover:bg-blue-600 text-white font-bold py-4 rounded-xl shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                                상담 신청하기
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Location & Info -->
+                <div class="w-full lg:w-1/2 reveal text-white">
+                    <div class="w-full h-64 md:h-80 bg-gray-300 rounded-3xl overflow-hidden mb-8 shadow-floating">
+                        <!-- Map placeholder image for iframe -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.267687895475!2d127.01257131566444!3d37.49000853559404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca16f1c4df821%3A0x6b78e1c312763f!2z7ISc7LSI7Jet!5e0!3m2!1sko!2skr!4v1625020102021!5m2!1sko!2skr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+
+                    <div class="space-y-6 pl-2">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-location-dot text-point"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">사무소 주소</h4>
+                                <p class="text-gray-300 leading-relaxed">서울특별시 서초구 서초대로 123-1, 로램빌딩 10층</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-regular fa-clock text-point"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">운영 시간</h4>
+                                <p class="text-gray-300 leading-relaxed">평일 09:00 - 18:00<br><span class="text-sm text-gray-400">* 야간/주말 상담은 사전 예약 시 가능합니다.</span></p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-square-parking text-point"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">오시는 길 & 주차</h4>
+                                <p class="text-gray-300 leading-relaxed">서초역 1번 출구 도보 3분<br>건물 내 지하주차장 2시간 무료 지원</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-gray-400 py-8 text-center text-sm mb-14 md:mb-0">
+        <p>로램 법률사무소 | 대표변호사: 김대표 | 사업자등록번호: 123-45-67890</p>
+        <p class="mt-2">서울특별시 서초구 서초대로 123-1, 10층 | TEL: 02-1234-5678</p>
+        <p class="mt-4 text-gray-500">Copyright © 2026 로램 법률사무소. All rights reserved.</p>
+    </footer>
+
+    <!-- Sticky Bottom Bar (Mobile 50/50, Desktop Floating) -->
+    <div class="fixed bottom-0 left-0 w-full z-50 md:bottom-8 md:right-8 md:left-auto md:w-auto md:flex md:flex-col md:gap-3 flex">
+        <!-- Kakao -->
+        <a href="#" class="flex-1 md:flex-none flex items-center justify-center gap-2 py-4 md:py-3 md:px-6 bg-kakao text-[#3A1D1D] font-bold text-lg md:text-base md:rounded-full shadow-[0_-4px_10px_rgba(0,0,0,0.1)] md:shadow-lg transition-transform hover:scale-105 active:scale-95">
+            <i class="fa-solid fa-comment"></i> 카톡 상담
+        </a>
+        <!-- Naver -->
+        <a href="#" class="flex-1 md:flex-none flex items-center justify-center gap-2 py-4 md:py-3 md:px-6 bg-naver text-white font-bold text-lg md:text-base md:rounded-full shadow-[0_-4px_10px_rgba(0,0,0,0.1)] md:shadow-lg transition-transform hover:scale-105 active:scale-95">
+            <i class="fa-solid fa-n"></i> 톡톡 상담
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Scroll Animation (Intersection Observer)
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealOptions = {
+            threshold: 0.15,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('active');
+                
+                // Trigger counter if element has counters
+                const counters = entry.target.querySelectorAll('.counter');
+                if(counters.length > 0) {
+                    counters.forEach(counter => {
+                        const target = +counter.getAttribute('data-target');
+                        const duration = 2000; // ms
+                        const increment = target / (duration / 16); // 60fps
+                        
+                        let current = 0;
+                        const updateCounter = () => {
+                            current += increment;
+                            if(current < target) {
+                                counter.innerText = Math.ceil(current);
+                                requestAnimationFrame(updateCounter);
+                            } else {
+                                counter.innerText = target;
+                            }
+                        };
+                        updateCounter();
+                        // Prevent counting again
+                        counter.classList.remove('counter'); 
+                    });
+                }
+                
+                observer.unobserve(entry.target);
+            });
+        }, revealOptions);
+
+        revealElements.forEach(el => {
+            revealOnScroll.observe(el);
+        });
+
+        // GNB Background opacity on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-sm');
+            } else {
+                nav.classList.remove('shadow-sm');
+            }
+        });
+    </script>
+</body>
+</html>
